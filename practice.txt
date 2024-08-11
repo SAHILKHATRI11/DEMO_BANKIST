@@ -1,0 +1,136 @@
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// LECTURES
+/*
+console.log(0.2 + 0.1 === 0.3); //this should give true but gives false because javascript has no other best way of storing it in base 10 value
+console.log(Number('23'));
+console.log(+'23');
+
+//parsing
+console.log(Number.parseInt('30px', 10));
+//does not work for below
+console.log(Number.parseInt('e23', 10));
+//this gives NaN
+//second argument is radix argument that tells which base to convert it to
+console.log(Number.isNaN('20'));
+console.log(Number.isNaN(+'20X'));
+console.log(Number.isNaN(23));
+// .isFinite method is best method to check if something is number or not
+console.log(Number.isFinite('20'));
+console.log(Number.isFinite(23 / 0));
+console.log(Number.isFinite(27));
+//Math.sqrt same as java
+console.log(25 ** (1 / 2)); //can also be done as this
+//for cube root
+console.log(8 ** (1 / 3));
+//Math.max for maximum value
+console.log(Math.max(5, 8, 23, 11));
+//this does not work becasue does not do type conversion
+console.log(Math.max(5, 8, '23px', 11));
+console.log(Math.PI * Number.parseFloat('10px') ** 2);
+console.log(Math.random() * 6 + 1);
+const randomInt = (min, max) =>
+  Math.trunc(Math.random() * (max - min) + 1) + min;
+console.log(randomInt(5, 10));
+//Math.trunc
+//Math.round
+//Math.floor gives the lesses value
+console.log(Math.floor(-23.3)); //gives -24 becasue -23.3 is smaller than -23 and greater than -24
+console.log(Math.floor(23.3));
+//(some number).toFixed(some integer number) the integer number is the decimal places it is going to give the result upto
+console.log((2.7).toFixed(0)); //this rounded up the digit upt0 zero decimal places
+console.log((2.7).toFixed(3));
+console.log((2.745).toFixed(2));
+// .toFixed always gives string as answer
+//modulus % lecture already known
+//isEven()to check if a number is even or not
+// labelBalance.addEventListener('click', function () {
+//   [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+//     if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+//     else row.style.backgroundColor = 'blue';
+//   });
+// });
+//   NUMERIC SEPERATOR
+// const diameter = 287_460_000_000;
+// console.log(diameter);
+// //js ignores the underscores this seperator is used for very big number for reading easily
+// const transferFee1 = 15_00;
+// const transferFee2 = 1_500;
+// //the following cannot be done
+// const PI = 3.14_15;
+// console.log(PI);
+
+//BIG INTEGER
+// console.log(2 ** 53 - 1); //biggest number js can give
+// console.log(Number.MAX_SAFE_INTEGER); //same as above
+// //WE MAY NEED WAY NUMBERS THAN MAX LIMIT OF INTEGER IN JAVASCRIPT SO BIG INTEGER HELPS US IN THAT
+// //simply write n in front of a big integer
+// console.log(342934792374982340923479823470234n);
+// console.log(BigInt(34299823470234));
+// //big int does not change any math functionality it works normally as an integer
+// console.log(10000000n + 100000000n);
+// //but the catch is that big int cannot work normally with the normal int it has to work with another bigInt.
+// const huge = 3232434234239442384029n;
+// const num = 23;
+// console.log(huge + BigInt(num));
+// console.log(20n > 15);
+// console.log(20n === 20); //js does not type convert the big int to an int so comparison gives false
+// console.log(huge + 'is REALLY big!!');
+// //create a date
+// const now = new Date();
+// console.log(now);
+// console.log(new Date(account1.movementsDates[0]));
+const future = new Date(2024, 10, 19, 15, 23);
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDay());
+console.log(future.getDate());
+console.log(future.getHours());
+console.log(future.getSeconds());
+// to get the current time stamp
+//it gives all the time from 1970 till now milliseconds also
+console.log(Date.now());
+//FAKE ALWAYS LOGGED IN
+
+const future = new Date(2024, 10, 19, 15, 23);
+console.log(+future);
+
+const days1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 3, 24));
+console.log(days1);
+
+//setTimeout practice
+const ingredients = ['olives', 'origano'];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
+  3000,
+  ...ingredients
+);
+if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+
+//set interval practice
+//The setInterval() method, offered on the Window and WorkerGlobalScope interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+setInterval(function () {
+  const now = new Date();
+  console.log(now);
+}, 1000);
+*/
+// const now = new Date();
+// const day = `${now.getDate()}`.padStart(2, 0);
+// //padStar pads a string with another string till it reaches the length of the given first argument and the second argument is the one getting added at the beginning of the string we are padding itn with
+// const month = `${now.getMonth() + 1}`.padStart(2, 0); //because javaScript gives month zero indexed.
+// const year = now.getFullYear();
+// const hour = `${now.getHours()}`.padStart(2, 0);
+// const min = `${now.getMinutes()}`.padStart(2, 0);
+// labelDate.textContent = `${day}/${month}/${year},${hour}:${min}`;
+//const locale=navigator.language;
+//this locale variable can also be used to directly take the users browser location and set date according to their place
+//but I will not use it as I want it in en-US for all users
+//I am Indian so I should use 'hi-IN' instead I am using en-US to match the overall display of the app
+//it can also be numeric but then month number will be visible which for a lot of people is tiring to calculate sometimes so long for month name
+//FAKE ALWAYS LOGGED IN
+// currentAccount = account1;
+// updateUI(currentAccount);
+// containerApp.style.opacity = 100;
+//internationalizing date API in javascript
+//you can replace according to your country here
